@@ -21,6 +21,22 @@ const content = [
     "Frameworks populares para desenvolvimento front-end: React, Vue e Angular, por exemplo",
     "Node.js: Ambiente de execução JavaScript para backend",
     "jQuery: Biblioteca para simplificar a manipulação do DOM"
+  ],
+  [
+    `<pre>
+    if (hour < 18) {
+      greeting = "Good day";
+   }else {
+      greeting = "Good evening";
+   } 
+    </pre>`,
+
+    `<pre>
+    for (let i = 0; i < cars.length; i++) {
+    text += cars[i] + " ";
+    }
+    </pre>`
+
   ]
 ];
 //Get em array dos botões
@@ -44,6 +60,11 @@ const buttons = [
     id: 3,
     idName: 'btn-resources',
     get: document.getElementById("btn-resources")
+  },
+  {
+    id: 4,
+    idName: 'btn-code',
+    get: document.getElementById("btn-code")
   }
 ]
 
