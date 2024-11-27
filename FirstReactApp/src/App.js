@@ -64,6 +64,12 @@ export default function App() {
             Assunto Relacionado e Referência
           </button>
           <button
+            className={activeContentIndex === 3 ? "active" : ""}
+            onClick={() => setActiveContentIndex(3)}
+          >
+            Diferença entre Reacct e Vanilla JS
+          </button>
+          <button
             className={activeContentIndex === 4 ? "active" : ""}
             onClick={() => setActiveContentIndex(4)}
           >
