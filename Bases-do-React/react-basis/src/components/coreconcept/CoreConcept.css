@@ -1,7 +1,12 @@
 
-#concept-list li{
-    text-align: left;
-    width: 28rem;
-    list-style: disc;
-    
+
+#core-concepts .concepts{
+    background-color: #6136AA;
+    padding: 1rem;
+    margin: 5px;
+}
+
+#core-concepts .concepts li{
+    text-align: left !important;
+    font-size: small !important;;
 }
