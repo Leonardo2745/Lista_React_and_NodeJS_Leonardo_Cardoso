@@ -10,3 +10,9 @@
     text-align: left !important;
     font-size: small !important;;
 }
+
+.imgConcept {
+    margin: 15px;
+    align-items: center;
+    width: 40%;
+}

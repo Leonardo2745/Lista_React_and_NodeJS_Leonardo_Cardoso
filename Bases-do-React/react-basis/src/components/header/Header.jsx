@@ -2,7 +2,7 @@
 /* eslint-disable no-unused-vars */
 
 import "./Header.css";
-import messiCareca from "../../assets/ab67706c0000da84302872ea0b7d69e6b7c7c40d.jfif";
+import messiCareca from "../../assets/atividade/373d89e6f68b4a4c6b8bf9df2e2b783c.png";
 const randomWords = () => {
   const words = ["conceitos", "fundamentos", "definições"];
   const indice = Math.floor(Math.random() * words.length);
