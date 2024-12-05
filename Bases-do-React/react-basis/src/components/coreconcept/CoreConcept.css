@@ -14,5 +14,6 @@
 .imgConcept {
     margin: 15px;
     align-items: center;
-    width: 40%;
+    width: 45%;
+    border-radius: 12px;
 }
