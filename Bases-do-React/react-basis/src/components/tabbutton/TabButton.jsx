@@ -1,5 +1,5 @@
-const TapButton = ({children, onClick}) =>{
+
+const TabButton = ({children, onClick}) =>{
     return <li><button onClick={onClick}>{children}</button></li>
 }
-
-export default TapButton;
+export default TabButton;

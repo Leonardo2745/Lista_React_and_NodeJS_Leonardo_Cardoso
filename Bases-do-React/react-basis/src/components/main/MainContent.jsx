@@ -1,48 +1,54 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
-import CoreConcept from "../coreconcept/CoreConcept";
+import CoreConcept from "../coreconcept/CoreConcept.jsx";
 import "./MainContent.css";
-import MeuObjetivoComReact from "./meuObjetivoReact/MeuObjetivoComReact";
+import MeuObjetivoComReact from "./MeuObjetivoComReact/MeuObjetivoComReact.jsx";
+import { useState } from "react";
+import { conceitosChaves } from "../../data.js"
+import TabButton from "../tabbutton/TabButton.jsx";
 
-import {conceitosChaves} from "../../data"
-import TapButton from "../tabbutton/TabButton.jsx"
+const MainContent = () => {
 
-// Atividade 4 - Destructuring e Spread Operators em Props e Renderização Condicional 
-// Adapte CoreConcept para receber uma imagem que deve ser centralizada e posicionada abaixo de seu título;
-// Realize as estilizações necessárias para que a imagem fique ao centro, tenha largura do tamanho CoreConcept, porém, com 15px de magem nas laterais;
-// Importe as imagens no arquivo data.js lembrando de criar um novo atributo imgSrc, que refere à imagem importada, para cada objeto em conceitosChaves
-// Utilize conditional rendering para renderizar imagens se houver um valor de caminho no atributo imgSrc.
+  const [tabContent, setTabContent] = useState(1);
 
-const handleConceptCick = (e) => {
-  //Método para lidar com o click que "joga" um alert com o texto do elemento target/"alvo" clicado  
-  alert(e.target.innerText);
-}
+  const handleConceptClick = (e) => {
+    alert(e.target.innerText);
+  }
 
-const handleTabButton = (e) =>{
+  const handleTabButton = (id) => {
+    //console.log(e.target.innerText);
+    setTabContent(id);
+  }
 
-}
-
-const Main = () => {
   return (
     <main>
       <MeuObjetivoComReact />
       <section id="core-concepts">
         {conceitosChaves && conceitosChaves.map((conceitoChave, key) => {
           // Exemplo de props via 'Spread Operators ...conceitoChave e exemplo de Handler de click no componente CoreConcept '
-          return <CoreConcept key={key} {...conceitoChave} action={handleConceptCick}/>;
+          return <CoreConcept key={key} {...conceitoChave} action={handleConceptClick} />;
         })}
       </section>
       <section id="examples">
         <h2>Exemplos</h2>
         <menu>
-          {conceitosChaves && conceitosChaves.map((conceitoChave, key) =>{
-            return <TapButton key={key} onClick={() => handleTabButton}>{conceitoChave.titulo}</TapButton>
+          {/* <TabButton titulo='Botão'  /> */}
+          {conceitosChaves && conceitosChaves.map((conceitoChave, key) => {
+            return <TabButton key={key} onClick={() => { handleTabButton(key) }}>{conceitoChave.titulo}</TabButton>
           })}
         </menu>
-        
+        <div id="tab-content">
+          <h3>Exemplo de código em {conceitosChaves[tabContent].titulo}</h3>
+          <p></p>
+          <pre>
+            <code>
+              {conceitosChaves[tabContent].exemplo}
+            </code>
+          </pre>
+        </div>
       </section>
     </main>
   );
 };
 
-export default Main;
+export default MainContent;
