@@ -1,10 +1,11 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import CoreConcept from "../coreconcept/CoreConcept";
-import "./Main.css";
+import "./MainContent.css";
 import MeuObjetivoComReact from "./meuObjetivoReact/MeuObjetivoComReact";
 
 import {conceitosChaves} from "../../data"
+import TapButton from "../tabbutton/TabButton.jsx"
 
 // Atividade 4 - Destructuring e Spread Operators em Props e Renderização Condicional 
 // Adapte CoreConcept para receber uma imagem que deve ser centralizada e posicionada abaixo de seu título;
@@ -16,15 +17,29 @@ const handleConceptCick = (e) => {
   //Método para lidar com o click que "joga" um alert com o texto do elemento target/"alvo" clicado  
   alert(e.target.innerText);
 }
+
+const handleTabButton = (e) =>{
+
+}
+
 const Main = () => {
   return (
     <main>
       <MeuObjetivoComReact />
       <section id="core-concepts">
-        {conceitosChaves.map((conceitoChave, key) => {
+        {conceitosChaves && conceitosChaves.map((conceitoChave, key) => {
           // Exemplo de props via 'Spread Operators ...conceitoChave e exemplo de Handler de click no componente CoreConcept '
           return <CoreConcept key={key} {...conceitoChave} action={handleConceptCick}/>;
         })}
+      </section>
+      <section id="examples">
+        <h2>Exemplos</h2>
+        <menu>
+          {conceitosChaves && conceitosChaves.map((conceitoChave, key) =>{
+            return <TapButton key={key} onClick={() => handleTabButton}>{conceitoChave.titulo}</TapButton>
+          })}
+        </menu>
+        
       </section>
     </main>
   );

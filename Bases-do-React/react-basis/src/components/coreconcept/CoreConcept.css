@@ -11,10 +11,8 @@
     font-size: small !important;;
 }
 
-.imgConcept {
-    width: 20rem;
-    height: auto;
+#core-concepts .concepts img{
+    width: 5rem;
+    height: 5rem;
     margin: 1rem 0;
-    align-items: center;
-    border-radius: 12px;
 }
