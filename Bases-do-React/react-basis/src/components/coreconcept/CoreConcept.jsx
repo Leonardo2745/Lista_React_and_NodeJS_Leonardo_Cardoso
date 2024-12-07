@@ -1,15 +1,10 @@
 /* eslint-disable react/prop-types */
 import "./CoreConcept.css";
-//import messiCareca from "../../assets/ab67706c0000da84302872ea0b7d69e6b7c7c40d.jfif";
-const CoreConcept = ({ id, titulo, conceitos, imgSrc, action }) => {
-  //const imgSrc = messiCareca;
+const CoreConcept = ({ id, titulo, imgSrc, conceitos, action }) => {
   return (
-
-    
-
-    <div id={`concept-${id}`} className="concepts">
+    <div id={`concept-${id}`} className="concept">
       <h2>{titulo}</h2>
-      {imgSrc && <img src={imgSrc} className="imgConcept"/>}
+      {imgSrc && <img src={imgSrc} alt="" />}
       <ul id="core-concept-list" onClick={action}>
         {conceitos.map((item, key) => {
           return <li key={key} >{item}</li>;

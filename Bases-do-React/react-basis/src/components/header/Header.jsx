@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 
 import "./Header.css";
-import bolsoGrilo from "../../assets/atividade/373d89e6f68b4a4c6b8bf9df2e2b783c.png";
+import bolsoGrilo from "../../assets/atividade/393eebc0-8515-4a6b-b21b-8c096eee5259.webp";
 const randomWords = () => {
   const words = ["conceitos", "fundamentos", "definições"];
   const indice = Math.floor(Math.random() * words.length);
