@@ -1,12 +1,7 @@
 /* eslint-disable no-unused-vars */
-import "./MeuObjetivoComReact.css";
-const MeuObjetivoComReact = () => {
-  const objetivos = [
-    "Aprimorar meus conhecimentos",
-    "Melhorar meus projetos",
-    "Desenvolver novas ferramentas",
-  ];
-
+import "./ObjetivoComReact.css";
+import { objetivos } from "../../../data.js"
+const ObjetivoComReact = () => {
   return (
     <>
       <h2>Meus Objetivos com React</h2>
@@ -21,4 +16,4 @@ const MeuObjetivoComReact = () => {
   );
 };
 
-export default MeuObjetivoComReact;
+export default ObjetivoComReact;
