@@ -31,7 +31,7 @@ const CoreSessionConcept = ({dados}) => {
                 <menu>
                     {/* <TabButton titulo='Botão'  /> */}
                     {dados && dados.map((conteudo, key) => {
-                        return <TabButton key={key} onClick={() => { handleTabButton(conteudo.id) }}>{conteudo.titulo}</TabButton>
+                        return <TabButton key={key} onClick={() => { handleTabButton(key) }}>{conteudo.titulo}</TabButton>
                     })}
                 </menu>
                 <div className="tab-content">
